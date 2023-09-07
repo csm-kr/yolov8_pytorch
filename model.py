@@ -35,6 +35,13 @@ class Conv(nn.Module):
         """Perform transposed convolution of 2D data."""
         return self.act(self.conv(x))
 
+# --------------- set the plan of the making models for yolo v8 ---------------
+# 1. study baseline structures
+# 2. original conv
+# 3. c2f module 
+# 4. train the base model for classification
+# 5. imagenet 
+
 if __name__ == "__main__":
     img = torch.randn([3, 3, 224, 224]).cuda()
     print(img)
